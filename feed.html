@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+     body {
+  font-family: sans-serif;
+  background-color: #fff8f2;
+
+  text-align: center;
+}
+
+#feed-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 320px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+  left: 36%;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #d35400;
+}
+
+#verMais {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d35400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#verMais:hover {
+  background-color: #e67e22;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="geral">
+                <div class="logo">
+                   <h1>Feed</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Sobre</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="feed.html">Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><br>
+
+    <div id="feed"></div>
+    <button id="verMais">Ver mais</button><br>
+     <script src="script.js">
+     </script>
+    <footer>
+        <p class="rodape ">@ 2025 Sergios Cakes| Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

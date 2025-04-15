@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Galeria</title>
+        <style>
+     /*Ladira sentiste o poder de um front end,e nem usei nenhuma framwork*/
+        
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.geral{
+	padding: 2%;
+	margin: 0 auto;
+	width: 100%;
+}
+.logo{
+	padding: -5%;
+	float: left;
+	width: 25;
+}
+.menu{
+	padding: 16px;
+	float: right;
+	width: 28%;
+}
+.menu ul{
+	list-style-type: none;
+}
+.menu ul li{
+	display: inline;
+	padding: 4px;
+}
+.menu ul li a{
+	text-decoration: none;
+	color:gold;
+	font-weight: bold;
+}
+.menu ul li a:hover{
+	text-decoration: underline;
+	color: yellow;
+	font-weight: bold;
+}
+.clearfix{
+	float: none;
+	clear: both;
+}
+header{
+	background-color:#333;
+	padding: 2%;
+}
+footer{
+	background-color:#333;
+	color: gold;
+	padding: 20px;	
+}
+.rodape{
+	text-align: center;
+}
+.carrossel {
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+.carrossel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carrossel-images img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.next {
+    left: 50%;
+    transform: translateX(-50%);
+}
+h1{
+    font-family:'Times New Roman', Times, serif;
+    color:gold;
+	font-weight: bold;
+    font-size: 30px;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="geral">
+                    <div class="logo">
+                        <h1>  Galeria </h1>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="index.html">Sobre</a></li>
+                            <li><a href="cursos.html">Cursos</a></li>
+                            <li><a href="servicos.html">Serviços</a></li>
+                            <li><a href="galeria.html">Galeria</a></li>
+                            <li><a href="feed.html">Feed</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><br>
+        </header>
+        <div class="carrossel">
+            <div class="carrossel-images">
+                <img src="cursos14.jpg">
+                <img src="produto12.jpg">
+                <img src="bolo7.jpg">
+                <img src="produto5.jpg">
+                <img src="produto8.jpg">
+            </div>
+            <button class="next" onclick="showMoreImages()">Mostrar mais</button>
+            <br>
+              <div class="carrossel-images">
+                <img src="./produto9.jpg">
+                <img src="./bolo2.jpg">
+                <img src="./bolo4.jpg">
+                <img src="./bolo3.jpg">
+                <img src="./produto14.jpg">
+                </div>
+            <button class="next" onclick="showMoreImages()">Mostrar mais</button>
+            <br>
+                <div class="carrossel-images">
+                <img src="./produto4.jpg">
+                <img src="./produto13.jpg">
+                <img src="./produto1.jpg">
+                <img src="./produto7.jpg">
+                <img src="./produto10.jpg">
+                </div>
+            <button class="next" onclick="showMoreImages()">Mostrar mais</button>
+            <br>
+                <div class="carrossel-images">
+                <img src="./bolo8.jpg">
+                <img src="./produto11.jpg">
+                <img src="./produto18.jpg">
+                <img src="./bolo7.jpg">
+                <img src="./produto16.jpg">
+            </div>
+            <button class="next" onclick="showMoreImages()">Mostrar mais</button>
+            <br>
+             <div class="carrossel-images">
+                <img src="./bolo9.jpg">
+                <img src="./produto19.jpg">
+                <img src="./produto20.jpg">
+                <img src="./produto21.jpg">
+                <img src="./pudim.jpg">
+            </div>
+            <button class="next" onclick="showMoreImages()">Mostrar mais</button>
+            <br>
+             <div class="carrossel-images">
+                <img src="./produto25.jpg">
+                <img src="./produto24.jpg">
+                <img src="./produto23.jpg">
+                <img src="./produto22.jpg">
+                <img src="./produto26.jpg">
+            </div>
+            <button class="next" onclick="showMoreImages()">Mostrar mais</button>
+            <br>
+            <div class="carrossel-images">
+                <img src="./bolo6.jpg">
+                <img src="./produto9.jpg">
+                <img src="./produto8.jpg">
+                <img src="./bolo.jpg">
+                <img src="./bolo5.jpg">
+            </div>
+        </div>
+
+        <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carrossel-images img');
+    const imagesPerPage = 3; 
+    
+
+    function showMoreImages() {
+        let endIndex = currentIndex + imagesPerPage;
+        for (let i = currentIndex; i < endIndex && i < images.length; i++) {
+            images[i].style.display = 'block'; 
+        }
+    
+        currentIndex += imagesPerPage;
+    
+       
+        if (currentIndex >= images.length) {
+            document.querySelector('.next').style.display = 'none';
+        }
+    }
+    showMoreImages();
+    
+        </script>
+        <div class="clearfix"></div>
+        <footer>
+            <p class="rodape ">@ 2025 Sergios Cakes| Todos os direitos reservados</p>
+        </footer>
+        </body>

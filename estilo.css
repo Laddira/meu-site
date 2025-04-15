@@ -1,0 +1,120 @@
+*{
+	padding: 0;
+	margin:0;
+	font-family: Times new roman, sans-serif;	
+}
+.geral{
+	padding: 2%;
+	margin: 0 auto;
+	width: 100%;
+}
+.logo{
+	padding: -5%;
+	float: left;
+	width: 25;
+}
+.menu{
+	padding: 16px;
+	float: right;
+	width: 25%;
+}
+.menu ul{
+	list-style-type: none;
+}
+.menu ul li{
+	display: inline;
+	padding: 2%
+}
+.menu ul li a{
+	text-decoration: none;
+	color:gold;
+	font-weight: bold;
+}
+.menu ul li a:hover{
+	text-decoration: underline;
+	color: yellow;
+	font-weight: bold;
+}
+.clearfix{
+	float: none;
+	clear: both;
+}
+.menu2{
+	display: inline;
+	padding: 4%;
+	width: 80%;	
+}
+.lista{
+	margin-bottom: 2%;
+}
+.titulo{
+	text-align: center;	
+	margin-bottom: 	2%;
+	margin-top: 2%;
+	color: gold;
+	font-weight: bold;
+	
+}
+.esquerda{
+	float: left;
+	padding: 2%;
+	width: 40%;
+}
+.direita{
+	float: right;
+	padding: 2%;
+	width: 45%;
+	display: inline;
+	margin-bottom: 2%;
+}
+.rodape{
+	text-align: center;
+}
+p{
+	text-align: justify;
+	width: 95%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+header{
+	background-color:#333;
+	padding: 2%;
+}
+footer{
+	background-color:#333;
+	color: gold;
+	padding: 20px;	
+}
+section{
+	border: 2px solid white;
+	width: 200%;
+	padding: 2%;
+	height: 90px;
+}
+h1{
+	color: gold;
+	font-weight: bold;
+}
+.inscrever{
+	background-color: gold;
+	border-radius: 5px;
+	width: 150px;
+	padding: 10px 20px;
+	margin-top: 5%;
+	margin-left: 4%;	
+}
+.last{
+	position: relative;
+	left: 2%;
+}
+button,a{
+	color: #000000;
+}
+a{
+	font-size: 15px;
+}
+
+button:hover{
+	background-color: darkgoldenrod;
+}
+
